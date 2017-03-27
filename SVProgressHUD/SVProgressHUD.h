@@ -99,8 +99,6 @@ typedef void (^SVProgressHUDDismissCompletion)(void);
 + (void)setMaxSupportedWindowLevel:(UIWindowLevel)windowLevel;      // default is UIWindowLevelNormal
 
 #pragma mark - Show Methods
-
-+ (SVProgressHUD*)sharedView;
 + (void)show;
 + (void)showWithMaskType:(SVProgressHUDMaskType)maskType;
 //+ (void)showWithMaskType:(SVProgressHUDMaskType)maskType __attribute__((deprecated("Use show and setDefaultMaskType: instead.")));

@@ -196,38 +196,37 @@ static const CGFloat SVProgressHUDDefaultAnimationDuration = 0.15;
 
 + (void)show {
     [self setDefaultMaskType:SVProgressHUDMaskTypeNone];
-    [self showWithStatus:nil];
+    [[self sharedView] showProgress:SVProgressHUDUndefinedProgress status:nil];
 }
 
 + (void)showWithMaskType:(SVProgressHUDMaskType)maskType {
 //    SVProgressHUDMaskType existingMaskType = [self sharedView].defaultMaskType;
-    [self setDefaultMaskType:maskType];
-    [self showWithStatus:nil];
+    [self sharedView].defaultMaskType = maskType;
+    [[self sharedView] showProgress:SVProgressHUDUndefinedProgress status:nil];
 //    [self setDefaultMaskType:existingMaskType];
 }
 
 + (void)showWithStatus:(NSString*)status {
     [self setDefaultMaskType:SVProgressHUDMaskTypeNone];
-    [self sharedView];
-    [self showProgress:SVProgressHUDUndefinedProgress status:status];
+    [[self sharedView] showProgress:SVProgressHUDUndefinedProgress status:status];
 }
 
 + (void)showWithStatus:(NSString*)status maskType:(SVProgressHUDMaskType)maskType {
 //    SVProgressHUDMaskType existingMaskType = [self sharedView].defaultMaskType;
     [self setDefaultMaskType:maskType];
-    [self showWithStatus:status];
+    [[self sharedView] showProgress:SVProgressHUDUndefinedProgress status:status];
 //    [self setDefaultMaskType:existingMaskType];
 }
 
 + (void)showProgress:(float)progress {
     [self setDefaultMaskType:SVProgressHUDMaskTypeNone];
-    [self showProgress:progress status:nil];
+    [[self sharedView] showProgress:progress status:nil];
 }
 
 + (void)showProgress:(float)progress maskType:(SVProgressHUDMaskType)maskType {
 //    SVProgressHUDMaskType existingMaskType = [self sharedView].defaultMaskType;
     [self setDefaultMaskType:maskType];
-    [self showProgress:progress];
+    [[self sharedView] showProgress:progress status:nil];
 //    [self setDefaultMaskType:existingMaskType];
 }
 
@@ -239,7 +238,7 @@ static const CGFloat SVProgressHUDDefaultAnimationDuration = 0.15;
 + (void)showProgress:(float)progress status:(NSString*)status maskType:(SVProgressHUDMaskType)maskType {
 //    SVProgressHUDMaskType existingMaskType = [self sharedView].defaultMaskType;
     [self setDefaultMaskType:maskType];
-    [self showProgress:progress status:status];
+    [[self sharedView] showProgress:progress status:status];
 //    [self setDefaultMaskType:existingMaskType];
 }
 
@@ -248,53 +247,56 @@ static const CGFloat SVProgressHUDDefaultAnimationDuration = 0.15;
 
 + (void)showInfoWithStatus:(NSString*)status {
     [self setDefaultMaskType:SVProgressHUDMaskTypeNone];
-    [self showImage:[self sharedView].infoImage status:status];
+    [self showCustomImage:[self sharedView].infoImage withStatus:status];
 }
 
 + (void)showInfoWithStatus:(NSString*)status maskType:(SVProgressHUDMaskType)maskType {
 //    SVProgressHUDMaskType existingMaskType = [self sharedView].defaultMaskType;
     [self setDefaultMaskType:maskType];
-    [self showInfoWithStatus:status];
+    [self showCustomImage:[self sharedView].infoImage withStatus:status];
 //    [self setDefaultMaskType:existingMaskType];
 }
 
 + (void)showSuccessWithStatus:(NSString*)status {
     [self setDefaultMaskType:SVProgressHUDMaskTypeNone];
-    [self showImage:[self sharedView].successImage status:status];
+    [self showCustomImage:[self sharedView].successImage withStatus:status];
 }
 
 + (void)showSuccessWithStatus:(NSString*)status maskType:(SVProgressHUDMaskType)maskType {
 //    SVProgressHUDMaskType existingMaskType = [self sharedView].defaultMaskType;
     [self setDefaultMaskType:maskType];
-    [self showSuccessWithStatus:status];
+    [self showCustomImage:[self sharedView].successImage withStatus:status];
 //    [self setDefaultMaskType:existingMaskType];
 }
 
 + (void)showErrorWithStatus:(NSString*)status {
     [self setDefaultMaskType:SVProgressHUDMaskTypeNone];
-    [self showImage:[self sharedView].errorImage status:status];
+    [self showCustomImage:[self sharedView].errorImage withStatus:status];
 }
 
 + (void)showErrorWithStatus:(NSString*)status maskType:(SVProgressHUDMaskType)maskType {
 //    SVProgressHUDMaskType existingMaskType = [self sharedView].defaultMaskType;
     [self setDefaultMaskType:maskType];
-    [self showErrorWithStatus:status];
+    [self showCustomImage:[self sharedView].errorImage withStatus:status];
 //    [self setDefaultMaskType:existingMaskType];
 }
 
 + (void)showImage:(UIImage*)image status:(NSString*)status {
     [self setDefaultMaskType:SVProgressHUDMaskTypeNone];
-    NSTimeInterval displayInterval = [self displayDurationForString:status];
-    [[self sharedView] showImage:image status:status duration:displayInterval];
+    [self showCustomImage:image withStatus:status];
 }
 
 + (void)showImage:(UIImage*)image status:(NSString*)status maskType:(SVProgressHUDMaskType)maskType {
 //    SVProgressHUDMaskType existingMaskType = [self sharedView].defaultMaskType;
     [self setDefaultMaskType:maskType];
-    [self showImage:image status:status];
+    [self showCustomImage:image withStatus:status];
 //    [self setDefaultMaskType:existingMaskType];
 }
 
++ (void)showCustomImage:(UIImage*)image withStatus:(NSString*)status{
+    NSTimeInterval displayInterval = [self displayDurationForString:status];
+    [[self sharedView] showImage:image status:status duration:displayInterval];
+}
 
 #pragma mark - Dismiss Methods
 
