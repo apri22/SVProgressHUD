@@ -8,12 +8,14 @@
 
 #import "SVDiamondAnimatedView.h"
 #import "SVProgressHUD.h"
+#import <FLAnimatedImage/FLAnimatedImage.h>
+#import <FLAnimatedImage/FLAnimatedImageView.h>
 
 @interface SVDiamondAnimatedView()
 
 @property (nonatomic, strong)CAShapeLayer *ringAnimatedLayer;
-@property (strong, nonatomic)AnimatedGif *diamondGif;
-@property (strong, nonatomic)UIImageView *imageView;
+@property (strong, nonatomic)FLAnimatedImageView *imageView;
+@property (strong, nonatomic)FLAnimatedImage *diamondGif;
 @end
 
 @implementation SVDiamondAnimatedView
@@ -23,7 +25,6 @@
         [self layoutDiamondGif];
     } else {
         [_imageView removeFromSuperview];
-        [_imageView stopGifAnimation];
         _diamondGif = nil;
         _ringAnimatedLayer = nil;
     }
@@ -32,23 +33,22 @@
 - (void)layoutDiamondGif{
     CALayer *layer = self.ringAnimatedLayer;
     if(!_imageView){
-        self.imageView = [[UIImageView alloc] initWithFrame:CGRectZero];
+        self.imageView = [[FLAnimatedImageView alloc] initWithFrame:CGRectZero];
+        self.imageView.animatedImage = self.diamondGif;
     }
     self.imageView.frame = layer.frame;
     if(self.imageView.superview == nil){
         [self addSubview:self.imageView];
     }
-    [self.imageView setAnimatedGif:self.diamondGif startImmediately:true];
-    
 }
 
-- (AnimatedGif *)diamondGif{
+- (NSData *)diamondGif{
     if(!_diamondGif){
         NSBundle *bundle = [NSBundle bundleForClass:[SVProgressHUD class]];
         NSURL *url = [bundle URLForResource:@"SVProgressHUD" withExtension:@"bundle"];
         NSBundle *imageBundle = [NSBundle bundleWithURL:url];
-        NSData * animationData = [NSData dataWithContentsOfFile:[imageBundle pathForResource:@"loading_diamond_gray" ofType:@"gif"]];
-        _diamondGif = [AnimatedGif getAnimationForGifWithData:animationData];
+        NSData * animationData = [NSData dataWithContentsOfFile:[imageBundle pathForResource:@"diamond" ofType:@"gif"]];
+        _diamondGif = [FLAnimatedImage animatedImageWithGIFData:animationData];
     }
     return _diamondGif;
 }

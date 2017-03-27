@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name     = 'SVProgressHUD'
-  s.version  = '2.0.7'
+  s.version  = '2.0.8'
   s.ios.deployment_target = '6.1'
   s.license  = 'MIT'
   s.summary  = 'A clean and lightweight progress HUD for your iOS and tvOS app.'
@@ -14,5 +14,5 @@ Pod::Spec.new do |s|
   s.framework    = 'QuartzCore'
   s.resources    = 'SVProgressHUD/SVProgressHUD.bundle'
   s.requires_arc = true
-  s.dependency 'Animated-Gif-iOS'
+  s.dependency 'FLAnimatedImage'
 end

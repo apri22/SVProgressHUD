@@ -13,7 +13,6 @@
 #import "SVIndefiniteAnimatedView.h"
 #import "SVProgressAnimatedView.h"
 #import "SVRadialGradientLayer.h"
-#import <Animated-Gif-iOS/UIImageView+AnimatedGif.h>
 #import "SVDiamondAnimatedView.h"
 
 NSString * const SVProgressHUDDidReceiveTouchEventNotification = @"SVProgressHUDDidReceiveTouchEventNotification";
@@ -1303,7 +1302,7 @@ static const CGFloat SVProgressHUDDefaultAnimationDuration = 0.15;
     _hudView.layer.cornerRadius = self.cornerRadius;
 #if __IPHONE_OS_VERSION_MAX_ALLOWED >= 80000
     // On iOS 8, the background color is set via a UIVisualEffectsView, see updateBlurBounds:
-    _hudView.backgroundColor = self.defaultStyle == SVProgressHUDStyleCustom ? self.backgroundColor : [UIColor clearColor];
+    _hudView.backgroundColor = self.defaultStyle == SVProgressHUDStyleCustom ? self.backgroundColor : [UIColor whiteColor];
 #else
     _hudView.backgroundColor = self.backgroundColorForStyle;
 #endif

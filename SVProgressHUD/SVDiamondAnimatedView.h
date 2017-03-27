@@ -7,8 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <Animated-Gif-iOS/AnimatedGif.h>
-#import <Animated-Gif-iOS/UIImageView+AnimatedGif.h>
 
 @interface SVDiamondAnimatedView : UIView
 

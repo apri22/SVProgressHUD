@@ -1,7 +1,7 @@
 PODS:
-  - Animated-Gif-iOS (1.1.0)
-  - SVProgressHUD (2.0.7):
-    - Animated-Gif-iOS
+  - FLAnimatedImage (1.0.12)
+  - SVProgressHUD (2.0.8):
+    - FLAnimatedImage
 
 DEPENDENCIES:
   - SVProgressHUD (from `../`)
@@ -11,8 +11,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Animated-Gif-iOS: b3c0d798d2f59bed92b4adddfef6ebb7b80355f2
-  SVProgressHUD: 80dc84a539fbaaf05fdf3c0cc726ef49bb73ee88
+  FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
+  SVProgressHUD: 48c931ddad44c2fbc94ed6b9850961119a358af0
 
 PODFILE CHECKSUM: b2f85c377d794346afa2f2d872f22e0e82b225bd
 
