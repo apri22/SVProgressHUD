@@ -47,7 +47,6 @@
 
 - (void)show {
 	[SVProgressHUD show];
-    [SVProgressHUD sharedView:]
 }
 
 - (void)showWithStatus {

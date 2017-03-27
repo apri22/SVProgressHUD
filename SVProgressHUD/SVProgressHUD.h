@@ -38,6 +38,7 @@ typedef NS_ENUM(NSUInteger, SVProgressHUDMaskType) {
 };
 
 typedef NS_ENUM(NSUInteger, SVProgressHUDAnimationType) {
+    SVProgressHUDAnimationTypeDiamond ,   // Bridestory Diamond Loading
     SVProgressHUDAnimationTypeFlat,     // default animation type, custom flat animation (indefinite animated ring)
     SVProgressHUDAnimationTypeNative    // iOS native UIActivityIndicatorView
 };
@@ -56,7 +57,9 @@ typedef void (^SVProgressHUDDismissCompletion)(void);
 @property (assign, nonatomic) CGFloat ringThickness UI_APPEARANCE_SELECTOR;         // default is 2 pt
 @property (assign, nonatomic) CGFloat ringRadius UI_APPEARANCE_SELECTOR;            // default is 18 pt
 @property (assign, nonatomic) CGFloat ringNoTextRadius UI_APPEARANCE_SELECTOR;      // default is 24 pt
-@property (assign, nonatomic) CGFloat cornerRadius UI_APPEARANCE_SELECTOR;          // default is 14 pt
+@property (assign, nonatomic) CGFloat cornerRadius UI_APPEARANCE_SELECTOR;          // default is 14 pt      // default is 2 pt
+@property (assign, nonatomic) CGFloat diamondRadius UI_APPEARANCE_SELECTOR;            // default is 18 pt
+@property (assign, nonatomic) CGFloat diamondNoTextRadius UI_APPEARANCE_SELECTOR;
 @property (strong, nonatomic) UIFont *font UI_APPEARANCE_SELECTOR;                  // default is [UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline]
 @property (strong, nonatomic) UIColor *backgroundColor UI_APPEARANCE_SELECTOR;      // default is [UIColor whiteColor]
 @property (strong, nonatomic) UIColor *foregroundColor UI_APPEARANCE_SELECTOR;      // default is [UIColor blackColor]

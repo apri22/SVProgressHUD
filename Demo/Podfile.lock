@@ -1,0 +1,19 @@
+PODS:
+  - Animated-Gif-iOS (1.1.0)
+  - SVProgressHUD (2.0.5):
+    - Animated-Gif-iOS
+
+DEPENDENCIES:
+  - SVProgressHUD (from `../`)
+
+EXTERNAL SOURCES:
+  SVProgressHUD:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Animated-Gif-iOS: b3c0d798d2f59bed92b4adddfef6ebb7b80355f2
+  SVProgressHUD: 58fb2ac9b7f8b37fa620bb7796ffc3721451a4bc
+
+PODFILE CHECKSUM: b2f85c377d794346afa2f2d872f22e0e82b225bd
+
+COCOAPODS: 1.2.0

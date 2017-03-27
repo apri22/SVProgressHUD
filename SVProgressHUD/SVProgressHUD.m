@@ -13,6 +13,8 @@
 #import "SVIndefiniteAnimatedView.h"
 #import "SVProgressAnimatedView.h"
 #import "SVRadialGradientLayer.h"
+#import <Animated-Gif-iOS/UIImageView+AnimatedGif.h>
+#import "SVDiamondAnimatedView.h"
 
 NSString * const SVProgressHUDDidReceiveTouchEventNotification = @"SVProgressHUDDidReceiveTouchEventNotification";
 NSString * const SVProgressHUDDidTouchDownInsideNotification = @"SVProgressHUDDidTouchDownInsideNotification";
@@ -343,7 +345,7 @@ static const CGFloat SVProgressHUDDefaultAnimationDuration = 0.15;
         // Set default values
         _defaultMaskType = SVProgressHUDMaskTypeNone;
         _defaultStyle = SVProgressHUDStyleLight;
-        _defaultAnimationType = SVProgressHUDAnimationTypeFlat;
+        _defaultAnimationType = SVProgressHUDAnimationTypeDiamond;
         _minimumSize = CGSizeMake(100.0f, 100.0f);
         
         if ([UIFont respondsToSelector:@selector(preferredFontForTextStyle:)]) {
@@ -370,6 +372,9 @@ static const CGFloat SVProgressHUDDefaultAnimationDuration = 0.15;
             _errorImage = errorImage;
         }
 
+        _diamondRadius = 16.0f;
+        _diamondNoTextRadius = 22.0f;
+        
         _ringThickness = 2.0f;
         _ringRadius = 18.0f;
         _ringNoTextRadius = 24.0f;
@@ -1116,7 +1121,21 @@ static const CGFloat SVProgressHUDDefaultAnimationDuration = 0.15;
 
 - (UIView*)indefiniteAnimatedView {
     // Get the correct spinner for defaultAnimationType
-    if(self.defaultAnimationType == SVProgressHUDAnimationTypeFlat){
+    if(self.defaultAnimationType == SVProgressHUDAnimationTypeDiamond){
+        // Check if spinner exists and is an object of different class
+        if(_indefiniteAnimatedView && ![_indefiniteAnimatedView isKindOfClass:[SVDiamondAnimatedView class]]){
+            [_indefiniteAnimatedView removeFromSuperview];
+            _indefiniteAnimatedView = nil;
+        }
+        
+        if(!_indefiniteAnimatedView){
+            _indefiniteAnimatedView = [[SVDiamondAnimatedView alloc] initWithFrame:CGRectZero];
+        }
+        
+        // Update styling
+        SVDiamondAnimatedView *indefiniteAnimatedView = (SVDiamondAnimatedView*)_indefiniteAnimatedView;
+        indefiniteAnimatedView.radius = self.statusLabel.text ? self.diamondRadius : self.diamondNoTextRadius;
+    }else if(self.defaultAnimationType == SVProgressHUDAnimationTypeFlat){
         // Check if spinner exists and is an object of different class
         if(_indefiniteAnimatedView && ![_indefiniteAnimatedView isKindOfClass:[SVIndefiniteAnimatedView class]]){
             [_indefiniteAnimatedView removeFromSuperview];
