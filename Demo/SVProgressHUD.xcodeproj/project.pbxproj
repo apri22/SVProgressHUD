@@ -14,29 +14,18 @@
 		2265DEEE14706A8900B3EBF7 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2265DEED14706A8900B3EBF7 /* README.md */; };
 		22A748961630AD6A004893A8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22A748951630AD6A004893A8 /* Default-568h@2x.png */; };
 		22B9D43816B92E4D00E71652 /* SVProgressHUD.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 22B9D43716B92E4D00E71652 /* SVProgressHUD.podspec */; };
-		22D13AB71365FEAC0025FCC9 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 22D13AB61365FEAC0025FCC9 /* SVProgressHUD.bundle */; };
 		22EBCD19134128130074B281 /* MainWindow-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22EBCD18134128130074B281 /* MainWindow-iPad.xib */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		2899E5220DE3E06400AC0155 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* ViewController.xib */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		28D7ACF80DDB3853001CB0EB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* ViewController.m */; };
-		3C32D9211CAC66CA009CDAB0 /* SVProgressAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C32D9201CAC66CA009CDAB0 /* SVProgressAnimatedView.m */; };
-		3C32D9231CAD056D009CDAB0 /* SVProgressAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C32D9201CAC66CA009CDAB0 /* SVProgressAnimatedView.m */; };
-		3CD078EA1A3B809500290D80 /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD078E91A3B809500290D80 /* SVRadialGradientLayer.m */; };
 		3FF0384716633A330070E901 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FF0384616633A330070E901 /* QuartzCore.framework */; };
-		63ADC4BC1364C1360060E45B /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 63ADC4BA1364C1360060E45B /* SVProgressHUD.m */; };
-		660BC2A81E894A34001016D1 /* SVDiamondAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 660BC2A71E894A34001016D1 /* SVDiamondAnimatedView.m */; };
 		80C8931388138B2F61C12348 /* libPods-iOS Demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F660D0692D32D4F3145930 /* libPods-iOS Demo.a */; };
 		AFB9814361EA5CC13D0D60AF /* libPods-tvOS Demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 79529C931CBBE00A0AE3A2BA /* libPods-tvOS Demo.a */; };
-		B07118291A3264C900C8A614 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = B07118281A3264C900C8A614 /* SVIndefiniteAnimatedView.m */; };
 		D36EDBD21BE7E9B000BD0EF1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D36EDBD11BE7E9B000BD0EF1 /* main.m */; };
 		D36EDBD51BE7E9B000BD0EF1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D36EDBD41BE7E9B000BD0EF1 /* AppDelegate.m */; };
 		D36EDBDB1BE7E9B100BD0EF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D36EDBD91BE7E9B100BD0EF1 /* Main.storyboard */; };
 		D396A65D1BE7EAD400E6E1BF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* ViewController.m */; };
-		D396A65E1BE7EB4700E6E1BF /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD078E91A3B809500290D80 /* SVRadialGradientLayer.m */; };
-		D396A65F1BE7EB4B00E6E1BF /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 63ADC4BA1364C1360060E45B /* SVProgressHUD.m */; };
-		D396A6601BE7EB4D00E6E1BF /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = B07118281A3264C900C8A614 /* SVIndefiniteAnimatedView.m */; };
-		D396A6611BE7F6BF00E6E1BF /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 22D13AB61365FEAC0025FCC9 /* SVProgressHUD.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,7 +37,6 @@
 		2265DEED14706A8900B3EBF7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		22A748951630AD6A004893A8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		22B9D43716B92E4D00E71652 /* SVProgressHUD.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = SVProgressHUD.podspec; path = ../SVProgressHUD.podspec; sourceTree = "<group>"; };
-		22D13AB61365FEAC0025FCC9 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
 		22EBCD18134128130074B281 /* MainWindow-iPad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "MainWindow-iPad.xib"; path = "Resources-iPad/MainWindow-iPad.xib"; sourceTree = "<group>"; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		2899E5210DE3E06400AC0155 /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ViewController.xib; path = ../ViewController.xib; sourceTree = "<group>"; };
@@ -59,21 +47,11 @@
 		2C24586E9EB470C59D46FCA6 /* Pods-tvOS Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tvOS Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-tvOS Demo/Pods-tvOS Demo.release.xcconfig"; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* SVProgressHUD_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD_Prefix.pch; sourceTree = "<group>"; };
 		33F1C695203790E64451B573 /* Pods-tvOS Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tvOS Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tvOS Demo/Pods-tvOS Demo.debug.xcconfig"; sourceTree = "<group>"; };
-		3C32D91F1CAC66CA009CDAB0 /* SVProgressAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressAnimatedView.h; sourceTree = "<group>"; };
-		3C32D9201CAC66CA009CDAB0 /* SVProgressAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressAnimatedView.m; sourceTree = "<group>"; };
-		3CD078E81A3B809500290D80 /* SVRadialGradientLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVRadialGradientLayer.h; sourceTree = "<group>"; };
-		3CD078E91A3B809500290D80 /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVRadialGradientLayer.m; sourceTree = "<group>"; };
 		3FF0384616633A330070E901 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		54F660D0692D32D4F3145930 /* libPods-iOS Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOS Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		63ADC4B91364C1360060E45B /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
-		63ADC4BA1364C1360060E45B /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
-		660BC2A61E894A34001016D1 /* SVDiamondAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVDiamondAnimatedView.h; sourceTree = "<group>"; };
-		660BC2A71E894A34001016D1 /* SVDiamondAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVDiamondAnimatedView.m; sourceTree = "<group>"; };
 		6AA6F8CCDF7F3826D4F0C1E9 /* Pods-iOS Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOS Demo/Pods-iOS Demo.release.xcconfig"; sourceTree = "<group>"; };
 		79529C931CBBE00A0AE3A2BA /* libPods-tvOS Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-tvOS Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D1107310486CEB800E47090 /* SVProgressHUD-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "SVProgressHUD-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
-		B07118271A3264C900C8A614 /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
-		B07118281A3264C900C8A614 /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
 		BF51F991533DFFA8D22039D1 /* Pods-iOS Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOS Demo/Pods-iOS Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		D36EDBCE1BE7E9B000BD0EF1 /* tvOS Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tvOS Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D36EDBD11BE7E9B000BD0EF1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -110,7 +88,6 @@
 		080E96DDFE201D6D7F000001 /* iOS Demo */ = {
 			isa = PBXGroup;
 			children = (
-				63ADC4B81364C1360060E45B /* SVProgressHUD */,
 				28D7ACF60DDB3853001CB0EB /* ViewController.h */,
 				28D7ACF70DDB3853001CB0EB /* ViewController.m */,
 				2899E5210DE3E06400AC0155 /* ViewController.xib */,
@@ -181,25 +158,6 @@
 				79529C931CBBE00A0AE3A2BA /* libPods-tvOS Demo.a */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		63ADC4B81364C1360060E45B /* SVProgressHUD */ = {
-			isa = PBXGroup;
-			children = (
-				B07118271A3264C900C8A614 /* SVIndefiniteAnimatedView.h */,
-				B07118281A3264C900C8A614 /* SVIndefiniteAnimatedView.m */,
-				3C32D91F1CAC66CA009CDAB0 /* SVProgressAnimatedView.h */,
-				3C32D9201CAC66CA009CDAB0 /* SVProgressAnimatedView.m */,
-				22D13AB61365FEAC0025FCC9 /* SVProgressHUD.bundle */,
-				63ADC4B91364C1360060E45B /* SVProgressHUD.h */,
-				63ADC4BA1364C1360060E45B /* SVProgressHUD.m */,
-				3CD078E81A3B809500290D80 /* SVRadialGradientLayer.h */,
-				3CD078E91A3B809500290D80 /* SVRadialGradientLayer.m */,
-				660BC2A61E894A34001016D1 /* SVDiamondAnimatedView.h */,
-				660BC2A71E894A34001016D1 /* SVDiamondAnimatedView.m */,
-			);
-			name = SVProgressHUD;
-			path = ../../SVProgressHUD;
 			sourceTree = "<group>";
 		};
 		D36EDBCF1BE7E9B000BD0EF1 /* tvOS Demo */ = {
@@ -308,7 +266,6 @@
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
 				2899E5220DE3E06400AC0155 /* ViewController.xib in Resources */,
 				22EBCD19134128130074B281 /* MainWindow-iPad.xib in Resources */,
-				22D13AB71365FEAC0025FCC9 /* SVProgressHUD.bundle in Resources */,
 				2265DEEE14706A8900B3EBF7 /* README.md in Resources */,
 				22A748961630AD6A004893A8 /* Default-568h@2x.png in Resources */,
 				22B9D43816B92E4D00E71652 /* SVProgressHUD.podspec in Resources */,
@@ -319,7 +276,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D396A6611BE7F6BF00E6E1BF /* SVProgressHUD.bundle in Resources */,
 				D36EDBDB1BE7E9B100BD0EF1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -424,14 +380,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B07118291A3264C900C8A614 /* SVIndefiniteAnimatedView.m in Sources */,
-				3CD078EA1A3B809500290D80 /* SVRadialGradientLayer.m in Sources */,
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				28D7ACF80DDB3853001CB0EB /* ViewController.m in Sources */,
-				660BC2A81E894A34001016D1 /* SVDiamondAnimatedView.m in Sources */,
-				3C32D9211CAC66CA009CDAB0 /* SVProgressAnimatedView.m in Sources */,
-				63ADC4BC1364C1360060E45B /* SVProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,13 +390,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C32D9231CAD056D009CDAB0 /* SVProgressAnimatedView.m in Sources */,
 				D396A65D1BE7EAD400E6E1BF /* ViewController.m in Sources */,
 				D36EDBD51BE7E9B000BD0EF1 /* AppDelegate.m in Sources */,
-				D396A65F1BE7EB4B00E6E1BF /* SVProgressHUD.m in Sources */,
 				D36EDBD21BE7E9B000BD0EF1 /* main.m in Sources */,
-				D396A65E1BE7EB4700E6E1BF /* SVRadialGradientLayer.m in Sources */,
-				D396A6601BE7EB4D00E6E1BF /* SVIndefiniteAnimatedView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
