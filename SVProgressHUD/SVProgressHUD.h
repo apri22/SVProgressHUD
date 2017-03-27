@@ -102,7 +102,7 @@ typedef void (^SVProgressHUDDismissCompletion)(void);
 
 + (SVProgressHUD*)sharedView;
 + (void)show;
-+ (void)showWithMaskType:(SVProgressHUDMaskType)maskType __attribute__((deprecated("Use show and setDefaultMaskType: instead.")));
++ (void)showWithMaskType:(SVProgressHUDMaskType)maskType;
 + (void)showWithStatus:(NSString*)status;
 + (void)showWithStatus:(NSString*)status maskType:(SVProgressHUDMaskType)maskType __attribute__((deprecated("Use showWithStatus: and setDefaultMaskType: instead.")));
 

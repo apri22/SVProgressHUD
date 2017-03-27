@@ -199,10 +199,8 @@ static const CGFloat SVProgressHUDDefaultAnimationDuration = 0.15;
 }
 
 + (void)showWithMaskType:(SVProgressHUDMaskType)maskType {
-    SVProgressHUDMaskType existingMaskType = [self sharedView].defaultMaskType;
     [self setDefaultMaskType:maskType];
     [self show];
-    [self setDefaultMaskType:existingMaskType];
 }
 
 + (void)showWithStatus:(NSString*)status {
