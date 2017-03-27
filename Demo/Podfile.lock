@@ -1,6 +1,6 @@
 PODS:
   - FLAnimatedImage (1.0.12)
-  - SVProgressHUD (2.0.8):
+  - SVProgressHUD (2.0.10):
     - FLAnimatedImage
 
 DEPENDENCIES:
@@ -12,7 +12,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
-  SVProgressHUD: 48c931ddad44c2fbc94ed6b9850961119a358af0
+  SVProgressHUD: 646d3c8c3134b7eb4607a68b298987f30951a719
 
 PODFILE CHECKSUM: b2f85c377d794346afa2f2d872f22e0e82b225bd
 

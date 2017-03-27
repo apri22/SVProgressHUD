@@ -103,27 +103,35 @@ typedef void (^SVProgressHUDDismissCompletion)(void);
 + (SVProgressHUD*)sharedView;
 + (void)show;
 + (void)showWithMaskType:(SVProgressHUDMaskType)maskType;
+//+ (void)showWithMaskType:(SVProgressHUDMaskType)maskType __attribute__((deprecated("Use show and setDefaultMaskType: instead.")));
 + (void)showWithStatus:(NSString*)status;
-+ (void)showWithStatus:(NSString*)status maskType:(SVProgressHUDMaskType)maskType __attribute__((deprecated("Use showWithStatus: and setDefaultMaskType: instead.")));
++ (void)showWithStatus:(NSString*)status maskType:(SVProgressHUDMaskType)maskType;
+//+ (void)showWithStatus:(NSString*)status maskType:(SVProgressHUDMaskType)maskType __attribute__((deprecated("Use showWithStatus: and setDefaultMaskType: instead.")));
 
 + (void)showProgress:(float)progress;
-+ (void)showProgress:(float)progress maskType:(SVProgressHUDMaskType)maskType __attribute__((deprecated("Use showProgress: and setDefaultMaskType: instead.")));
++ (void)showProgress:(float)progress maskType:(SVProgressHUDMaskType)maskType;
+//+ (void)showProgress:(float)progress maskType:(SVProgressHUDMaskType)maskType __attribute__((deprecated("Use showProgress: and setDefaultMaskType: instead.")));
 + (void)showProgress:(float)progress status:(NSString*)status;
-+ (void)showProgress:(float)progress status:(NSString*)status maskType:(SVProgressHUDMaskType)maskType __attribute__((deprecated("Use showProgress:status: and setDefaultMaskType: instead.")));
++ (void)showProgress:(float)progress status:(NSString*)status maskType:(SVProgressHUDMaskType)maskType;
+//+ (void)showProgress:(float)progress status:(NSString*)status maskType:(SVProgressHUDMaskType)maskType __attribute__((deprecated("Use showProgress:status: and setDefaultMaskType: instead.")));
 
 + (void)setStatus:(NSString*)status; // change the HUD loading status while it's showing
 
 // stops the activity indicator, shows a glyph + status, and dismisses the HUD a little bit later
 + (void)showInfoWithStatus:(NSString*)status;
-+ (void)showInfoWithStatus:(NSString*)status maskType:(SVProgressHUDMaskType)maskType __attribute__((deprecated("Use showInfoWithStatus: and setDefaultMaskType: instead.")));
++ (void)showInfoWithStatus:(NSString*)status maskType:(SVProgressHUDMaskType)maskType;
+//+ (void)showInfoWithStatus:(NSString*)status maskType:(SVProgressHUDMaskType)maskType __attribute__((deprecated("Use showInfoWithStatus: and setDefaultMaskType: instead.")));
 + (void)showSuccessWithStatus:(NSString*)status;
-+ (void)showSuccessWithStatus:(NSString*)status maskType:(SVProgressHUDMaskType)maskType __attribute__((deprecated("Use showSuccessWithStatus: and setDefaultMaskType: instead.")));
++ (void)showSuccessWithStatus:(NSString*)status maskType:(SVProgressHUDMaskType)maskType;
+//+ (void)showSuccessWithStatus:(NSString*)status maskType:(SVProgressHUDMaskType)maskType __attribute__((deprecated("Use showSuccessWithStatus: and setDefaultMaskType: instead.")));
 + (void)showErrorWithStatus:(NSString*)status;
-+ (void)showErrorWithStatus:(NSString*)status maskType:(SVProgressHUDMaskType)maskType __attribute__((deprecated("Use showErrorWithStatus: and setDefaultMaskType: instead.")));
++ (void)showErrorWithStatus:(NSString*)status maskType:(SVProgressHUDMaskType)maskType;
+//+ (void)showErrorWithStatus:(NSString*)status maskType:(SVProgressHUDMaskType)maskType __attribute__((deprecated("Use showErrorWithStatus: and setDefaultMaskType: instead.")));
 
 // shows a image + status, use 28x28 white PNGs
 + (void)showImage:(UIImage*)image status:(NSString*)status;
-+ (void)showImage:(UIImage*)image status:(NSString*)status maskType:(SVProgressHUDMaskType)maskType __attribute__((deprecated("Use showImage:status: and setDefaultMaskType: instead.")));
++ (void)showImage:(UIImage*)image status:(NSString*)status maskType:(SVProgressHUDMaskType)maskType;
+//+ (void)showImage:(UIImage*)image status:(NSString*)status maskType:(SVProgressHUDMaskType)maskType __attribute__((deprecated("Use showImage:status: and setDefaultMaskType: instead.")));
 
 + (void)setOffsetFromCenter:(UIOffset)offset;
 + (void)resetOffsetFromCenter;

@@ -195,94 +195,104 @@ static const CGFloat SVProgressHUDDefaultAnimationDuration = 0.15;
 #pragma mark - Show Methods
 
 + (void)show {
+    [self setDefaultMaskType:SVProgressHUDMaskTypeNone];
     [self showWithStatus:nil];
 }
 
 + (void)showWithMaskType:(SVProgressHUDMaskType)maskType {
+//    SVProgressHUDMaskType existingMaskType = [self sharedView].defaultMaskType;
     [self setDefaultMaskType:maskType];
-    [self show];
+    [self showWithStatus:nil];
+//    [self setDefaultMaskType:existingMaskType];
 }
 
 + (void)showWithStatus:(NSString*)status {
+    [self setDefaultMaskType:SVProgressHUDMaskTypeNone];
     [self sharedView];
     [self showProgress:SVProgressHUDUndefinedProgress status:status];
 }
 
 + (void)showWithStatus:(NSString*)status maskType:(SVProgressHUDMaskType)maskType {
-    SVProgressHUDMaskType existingMaskType = [self sharedView].defaultMaskType;
+//    SVProgressHUDMaskType existingMaskType = [self sharedView].defaultMaskType;
     [self setDefaultMaskType:maskType];
     [self showWithStatus:status];
-    [self setDefaultMaskType:existingMaskType];
+//    [self setDefaultMaskType:existingMaskType];
 }
 
 + (void)showProgress:(float)progress {
+    [self setDefaultMaskType:SVProgressHUDMaskTypeNone];
     [self showProgress:progress status:nil];
 }
 
 + (void)showProgress:(float)progress maskType:(SVProgressHUDMaskType)maskType {
-    SVProgressHUDMaskType existingMaskType = [self sharedView].defaultMaskType;
+//    SVProgressHUDMaskType existingMaskType = [self sharedView].defaultMaskType;
     [self setDefaultMaskType:maskType];
     [self showProgress:progress];
-    [self setDefaultMaskType:existingMaskType];
+//    [self setDefaultMaskType:existingMaskType];
 }
 
 + (void)showProgress:(float)progress status:(NSString*)status {
+    [self setDefaultMaskType:SVProgressHUDMaskTypeNone];
     [[self sharedView] showProgress:progress status:status];
 }
 
 + (void)showProgress:(float)progress status:(NSString*)status maskType:(SVProgressHUDMaskType)maskType {
-    SVProgressHUDMaskType existingMaskType = [self sharedView].defaultMaskType;
+//    SVProgressHUDMaskType existingMaskType = [self sharedView].defaultMaskType;
     [self setDefaultMaskType:maskType];
     [self showProgress:progress status:status];
-    [self setDefaultMaskType:existingMaskType];
+//    [self setDefaultMaskType:existingMaskType];
 }
 
 
 #pragma mark - Show, then automatically dismiss methods
 
 + (void)showInfoWithStatus:(NSString*)status {
+    [self setDefaultMaskType:SVProgressHUDMaskTypeNone];
     [self showImage:[self sharedView].infoImage status:status];
 }
 
 + (void)showInfoWithStatus:(NSString*)status maskType:(SVProgressHUDMaskType)maskType {
-    SVProgressHUDMaskType existingMaskType = [self sharedView].defaultMaskType;
+//    SVProgressHUDMaskType existingMaskType = [self sharedView].defaultMaskType;
     [self setDefaultMaskType:maskType];
     [self showInfoWithStatus:status];
-    [self setDefaultMaskType:existingMaskType];
+//    [self setDefaultMaskType:existingMaskType];
 }
 
 + (void)showSuccessWithStatus:(NSString*)status {
+    [self setDefaultMaskType:SVProgressHUDMaskTypeNone];
     [self showImage:[self sharedView].successImage status:status];
 }
 
 + (void)showSuccessWithStatus:(NSString*)status maskType:(SVProgressHUDMaskType)maskType {
-    SVProgressHUDMaskType existingMaskType = [self sharedView].defaultMaskType;
+//    SVProgressHUDMaskType existingMaskType = [self sharedView].defaultMaskType;
     [self setDefaultMaskType:maskType];
     [self showSuccessWithStatus:status];
-    [self setDefaultMaskType:existingMaskType];
+//    [self setDefaultMaskType:existingMaskType];
 }
 
 + (void)showErrorWithStatus:(NSString*)status {
+    [self setDefaultMaskType:SVProgressHUDMaskTypeNone];
     [self showImage:[self sharedView].errorImage status:status];
 }
 
 + (void)showErrorWithStatus:(NSString*)status maskType:(SVProgressHUDMaskType)maskType {
-    SVProgressHUDMaskType existingMaskType = [self sharedView].defaultMaskType;
+//    SVProgressHUDMaskType existingMaskType = [self sharedView].defaultMaskType;
     [self setDefaultMaskType:maskType];
     [self showErrorWithStatus:status];
-    [self setDefaultMaskType:existingMaskType];
+//    [self setDefaultMaskType:existingMaskType];
 }
 
 + (void)showImage:(UIImage*)image status:(NSString*)status {
+    [self setDefaultMaskType:SVProgressHUDMaskTypeNone];
     NSTimeInterval displayInterval = [self displayDurationForString:status];
     [[self sharedView] showImage:image status:status duration:displayInterval];
 }
 
 + (void)showImage:(UIImage*)image status:(NSString*)status maskType:(SVProgressHUDMaskType)maskType {
-    SVProgressHUDMaskType existingMaskType = [self sharedView].defaultMaskType;
+//    SVProgressHUDMaskType existingMaskType = [self sharedView].defaultMaskType;
     [self setDefaultMaskType:maskType];
     [self showImage:image status:status];
-    [self setDefaultMaskType:existingMaskType];
+//    [self setDefaultMaskType:existingMaskType];
 }
 
 
@@ -343,7 +353,7 @@ static const CGFloat SVProgressHUDDefaultAnimationDuration = 0.15;
         _defaultMaskType = SVProgressHUDMaskTypeNone;
         _defaultStyle = SVProgressHUDStyleLight;
         _defaultAnimationType = SVProgressHUDAnimationTypeDiamond;
-        _minimumSize = CGSizeMake(100.0f, 100.0f);
+        _minimumSize = CGSizeMake(80.0f, 80.0f);
         
         if ([UIFont respondsToSelector:@selector(preferredFontForTextStyle:)]) {
             _font = [UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline];
@@ -369,8 +379,8 @@ static const CGFloat SVProgressHUDDefaultAnimationDuration = 0.15;
             _errorImage = errorImage;
         }
 
-        _diamondRadius = 16.0f;
-        _diamondNoTextRadius = 22.0f;
+        _diamondRadius = 12.0f;
+        _diamondNoTextRadius = 15.0f;
         
         _ringThickness = 2.0f;
         _ringRadius = 18.0f;
@@ -402,8 +412,8 @@ static const CGFloat SVProgressHUDDefaultAnimationDuration = 0.15;
     CGFloat hudHeight = 0.0f;
     CGRect labelRect = CGRectZero;
     
-    CGFloat verticalSpacing = 12.0f; // |-12-content-(8-label-)12-|
-    CGFloat horizontalSpacing = 12.0f; // |-12-content-12-|
+    CGFloat verticalSpacing = 22.0f; // |-12-content-(8-label-)12-|
+    CGFloat horizontalSpacing = 22.0f; // |-12-content-12-|
     CGFloat progressLabelSpacing = 8.0f; // content-8-label; progess = spinner or image
     
     // Check if an image or progress ring is displayed
