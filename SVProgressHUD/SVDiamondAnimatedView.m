@@ -42,7 +42,7 @@
     }
 }
 
-- (NSData *)diamondGif{
+- (FLAnimatedImage *)diamondGif{
     if(!_diamondGif){
         NSBundle *bundle = [NSBundle bundleForClass:[SVProgressHUD class]];
         NSURL *url = [bundle URLForResource:@"SVProgressHUD" withExtension:@"bundle"];
